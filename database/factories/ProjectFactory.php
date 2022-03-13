@@ -14,7 +14,12 @@ class ProjectFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'city_id'       => random_int(1,10),
+            'company_id'    => random_int(1,10),
+            'user_id'       => random_int(1,10),
+            'budget'        => random_int(10000,100000),
+            'name'          => $this->faker->name(),
+            'execution_date'=> now(),
         ];
     }
 }
